@@ -1,123 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Work Day Scheduler</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="jumbotron">
-      <h1 class="display-3" style="color: #2B65EC"><span style="color: #4FDF3E">Beach </span><span style="color: #c2b280 ">House</span> Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day (on the beach)</p>
-      <p id="currentDay" class="lead"></p>
+        <h1 class="display-5" style="color: #2B65EC">The Lighthouse</h1>
+        <p class="lead">The weather is clear from the top of the lighthouse.</p>
+        <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+    <main class="container">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <h5>Search History</h5>
+                    <div id="btnList">
+                        <p class="city"><button type="button" class="btn btn-primary btn-sm">San Diego</button></p>
+                    </div>
+                </div>
+            </nav>
+            <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
-      <div id="hour-9" class="row time-block">
-        <div class="col-md-1 hour">
-          9AM
-        </div>
-        <textarea class="col-md-10 description"></textarea>
-        <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
+                <div class="card col">
+                    <div class="card-body">
+                        <h3 id="mainCityName">City Name </h3>
+                        <p id="tempLoc">Temperature: </p>
+                        <p id="humLoc">Humidity:</p>
+                        <p id="windLoc">Wind Speed:</p>
+                        <p >UV Index: <button type="button" class="btn btn-danger btn-sm" id="UVbtn"></button></p>
+                    </div>
+                </div>
 
-      <div id="hour-10" class="row time-block">
-        <div class="col-md-1 hour">
-          10AM
+                <div class="row">
+                    <!-- <h4>
+                        5 Day Forecast
+                    </h4>
+                </div>
+                <div class="col-3">
+                    blank
+                </div>
+                <div class="col-9">
+                    <div class="card-body">
+                        <h3 id="mainCityName">City Name </h3>
+                        <p id="tempLoc">Temperature: </p>
+                        <p id="humLoc">Humidity:</p>
+                        <p id="windLoc">Wind Speed:</p>
+                        <p id="uvLoc">UV Index: </p>
+                    </div>
+                </div> -->
+            </div>
         </div>
-        <textarea class="col-md-10 description"></textarea>
-        <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
+    </main>
 
-      <div id="hour-11" class="row time-block">
-        <div class="col-md-1 hour">
-          11AM
-        </div>
-        <textarea class="col-md-10 description"></textarea>
-        <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
 
-      <div id="hour-12" class="row time-block">
-        <div class="col-md-1 hour">
-          12PM
-        </div>
-        <textarea class="col-md-10 description"> </textarea>
-        <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
-      <div id="hour-13" class="row time-block">
-        <div class="col-md-1 hour">
-          1PM
-        </div>
-        <textarea class="col-md-10 description"> </textarea>
-        <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
-      <div id="hour-14" class="row time-block">
-        <div class="col-md-1 hour">
-          2PM
-        </div>
-        <textarea class="col-md-10 description"> </textarea>
-        <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
-      <div id="hour-15" class="row time-block">
-        <div class="col-md-1 hour">
-          3PM
-        </div>
-        <textarea class="col-md-10 description"> </textarea>
-        <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
-      <div id="hour-16" class="row time-block">
-        <div class="col-md-1 hour">
-          4PM
-        </div>
-        <textarea class="col-md-10 description"> </textarea>
-        <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
-      <div id="hour-17" class="row time-block">
-        <div class="col-md-1 hour">
-          5PM
-        </div>
-        <textarea class="col-md-10 description"> </textarea>
-        <button class="btn saveBtn col-md-1">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
-    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
-  </body>
+</body>
+
 </html>
