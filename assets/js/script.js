@@ -1,6 +1,6 @@
 $(function () {
     var apiKey = "b3ae335adbb780337592ec0c99fc049f";
-    var city = "San Diego"
+    var city = "New York"
 
 
     function fetchWeatherForCity(city) {
@@ -69,24 +69,28 @@ $(function () {
 
     fetchWeatherForCity(city);
 
-    //   $(document).on("submit", function() {
-    //       $("<p>").appendTo($())
+      $("#searchForm").on("submit", function (event) {
+        event.preventDefault();
+        city = $("#searchInput").val().trim();
+        if (city === "") {
+          return;
+        }
+        fetchWeatherForCity(city);
+        var newDiv = $("<div>").appendTo($("#btnList")).attr("class","city");
+        var newBtn = $("<button>").appendTo(newDiv);
+        newBtn.attr("type","button");
+        newBtn.attr("class", "btn btn-primary btn-sm city");
+        newBtn.attr("id", city);
+        newBtn.text(city);
+        $("#searchInput").val("");
+      });
 
 
-    //   });
+      $(".city").on("click", function (event) {
+        event.preventDefault();
 
-    //   $(document).on("click", ".city", function () {
-
-    //     var city = $(this).attr("data-city");
-    //     fetchWeatherForCity(city);
-    //   });
-
-    //   $("#search-form").on("submit", function (event) {
-    //     event.preventDefault();
-    //     var city = $("#search-input").val().trim();
-    //     if (city === "") {
-    //       return;
-    //     }
-    //     fetchWeatherForCity(city);
-    //   });
+        city = $(this).attr("id");
+        $("#searchInput").val("");
+        fetchWeatherForCity(city);
+      });
 });

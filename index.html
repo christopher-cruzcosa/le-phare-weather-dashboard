@@ -18,17 +18,26 @@
     </header>
     <main class="container">
         <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="sidebar-sticky">
+            <nav class="col-md-2  bg-light sidebar">
+                <div class="sidebar-sticky" id="searchForm">
+                    <form class="form-inline">
+                        <span class="form-group">
+                            <input type="text" class="form-control" id="searchInput" placeholder="Search for city">
+                        </span>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                    <br>
                     <h5>Search History</h5>
-                    <div id="btnList">
-                        <p class="city"><button type="button" class="btn btn-primary btn-sm">San Diego</button></p>
+                    <div id="btnList" class="not p">
+                        <div>
+                            <button type="button" class="btn btn-primary btn-sm city" id="New York">New York</button>
+                        </div>
                     </div>
                 </div>
             </nav>
             <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="row">
-                    <div class="card col">
+                    <div class="card col weather-card">
                         <div class="card-body">
                             <h3 id="mainCityName">City Name </h3>
                             <p id="tempLoc">Temperature: </p>
@@ -47,50 +56,50 @@
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                              <h5 class="card-title" data-forecast=1 id="forecastDate1">Day+1</h5>
-                              <p class="card-text" data-forecast=1><img id="forecastIcon1" src="" alt=""></p>
-                              <p class="card-text" data-forecast=1 id="forecastTemp1">Temperature:</p>
-                              <p class="card-text" data-forecast=1 id="forecastHum1">Humidity:</p>
+                                <h5 class="card-title" data-forecast=1 id="forecastDate1">Day+1</h5>
+                                <p class="card-text" data-forecast=1><img id="forecastIcon1" src="" alt=""></p>
+                                <p class="card-text" data-forecast=1 id="forecastTemp1">Temperature:</p>
+                                <p class="card-text" data-forecast=1 id="forecastHum1">Humidity:</p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                              <h5 class="card-title" data-forecast=2 id="forecastDate2">Day+1</h5>
-                              <p class="card-text" data-forecast=1><img id="forecastIcon2" src="" alt=""></p>
-                              <p class="card-text" data-forecast=2 id="forecastTemp2">Temperature:</p>
-                              <p class="card-text" data-forecast=2 id="forecastHum2">Humidity:</p>
+                                <h5 class="card-title" data-forecast=2 id="forecastDate2">Day+1</h5>
+                                <p class="card-text" data-forecast=1><img id="forecastIcon2" src="" alt=""></p>
+                                <p class="card-text" data-forecast=2 id="forecastTemp2">Temperature:</p>
+                                <p class="card-text" data-forecast=2 id="forecastHum2">Humidity:</p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                              <h5 class="card-title" data-forecast=3 id="forecastDate3">Day+1</h5>
-                              <p class="card-text" data-forecast=1><img id="forecastIcon3" src="" alt=""></p>
-                              <p class="card-text" data-forecast=3 id="forecastTemp3">Temperature:</p>
-                              <p class="card-text" data-forecast=3 id="forecastHum3">Humidity:</p>
+                                <h5 class="card-title" data-forecast=3 id="forecastDate3">Day+1</h5>
+                                <p class="card-text" data-forecast=1><img id="forecastIcon3" src="" alt=""></p>
+                                <p class="card-text" data-forecast=3 id="forecastTemp3">Temperature:</p>
+                                <p class="card-text" data-forecast=3 id="forecastHum3">Humidity:</p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                              <h5 class="card-title" data-forecast=4 id="forecastDate4">Day+1</h5>
-                              <p class="card-text" data-forecast=1><img id="forecastIcon4" src="" alt=""></p>
-                              <p class="card-text" data-forecast=4 id="forecastTemp4">Temperature:</p>
-                              <p class="card-text" data-forecast=4 id="forecastHum4">Humidity:</p>
+                                <h5 class="card-title" data-forecast=4 id="forecastDate4">Day+1</h5>
+                                <p class="card-text" data-forecast=1><img id="forecastIcon4" src="" alt=""></p>
+                                <p class="card-text" data-forecast=4 id="forecastTemp4">Temperature:</p>
+                                <p class="card-text" data-forecast=4 id="forecastHum4">Humidity:</p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                              <h5 class="card-title" data-forecast=5 id="forecastDate5">Day+1</h5>
-                              <p class="card-text" data-forecast=1><img id="forecastIcon5" src="" alt=""></p>
-                              <p class="card-text" data-forecast=5 id="forecastTemp5">Temperature:</p>
-                              <p class="card-text" data-forecast=5 id="forecastHum5">Humidity:</p>
+                                <h5 class="card-title" data-forecast=5 id="forecastDate5">Day+1</h5>
+                                <p class="card-text" data-forecast=1><img id="forecastIcon5" src="" alt=""></p>
+                                <p class="card-text" data-forecast=5 id="forecastTemp5">Temperature:</p>
+                                <p class="card-text" data-forecast=5 id="forecastHum5">Humidity:</p>
                             </div>
                         </div>
                     </div>
