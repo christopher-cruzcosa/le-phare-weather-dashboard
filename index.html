@@ -7,31 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Work Day Scheduler</title>
+    <title>le Phare Weather Dashboard</title>
 </head>
 
 <body>
     <header class="jumbotron">
-        <h1 class="display-5" style="color: #2B65EC">The Lighthouse</h1>
-        <p class="lead">The weather is clear from the top of the lighthouse.</p>
-        <p id="currentDay" class="lead"></p>
+        <h1 class="display-5" style="color: #2B65EC">le Phare</h1>
+        <p class="lead">A weather dashboard. Because you can see the horizon much clearer from the top of the lighthouse.</p>
     </header>
+
     <main class="container">
         <div class="row">
             <nav class="col-md-2  bg-light sidebar">
-                <div class="sidebar-sticky" id="searchForm">
-                    <form class="form-inline">
+                <div class="sidebar-sticky">
+                    <form class="form" id="searchForm">
                         <span class="form-group">
-                            <input type="text" class="form-control" id="searchInput" placeholder="Search for city">
+                            <input type="text" class="form-control" id="searchInput" placeholder="Search for a city">
                         </span>
-                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="submit" class="btn btn-primary mt-2" style="background-color: blueviolet;">Search</button>
                     </form>
                     <br>
                     <h5>Search History</h5>
-                    <div id="btnList" class="not p">
-                        <div>
-                            <button type="button" class="btn btn-primary btn-sm city" id="New York">New York</button>
-                        </div>
+                    <div id="btnList">
+                        
                     </div>
                 </div>
             </nav>
@@ -56,7 +54,7 @@
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                                <h5 class="card-title" data-forecast=1 id="forecastDate1">Day+1</h5>
+                                <h5 class="card-title " data-forecast=1 id="forecastDate1">Day+1</h5>
                                 <p class="card-text" data-forecast=1><img id="forecastIcon1" src="" alt=""></p>
                                 <p class="card-text" data-forecast=1 id="forecastTemp1">Temperature:</p>
                                 <p class="card-text" data-forecast=1 id="forecastHum1">Humidity:</p>
@@ -66,7 +64,7 @@
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                                <h5 class="card-title" data-forecast=2 id="forecastDate2">Day+1</h5>
+                                <h5 class="card-title" data-forecast=2 id="forecastDate2">Day+2</h5>
                                 <p class="card-text" data-forecast=1><img id="forecastIcon2" src="" alt=""></p>
                                 <p class="card-text" data-forecast=2 id="forecastTemp2">Temperature:</p>
                                 <p class="card-text" data-forecast=2 id="forecastHum2">Humidity:</p>
@@ -76,7 +74,7 @@
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                                <h5 class="card-title" data-forecast=3 id="forecastDate3">Day+1</h5>
+                                <h5 class="card-title" data-forecast=3 id="forecastDate3">Day+3</h5>
                                 <p class="card-text" data-forecast=1><img id="forecastIcon3" src="" alt=""></p>
                                 <p class="card-text" data-forecast=3 id="forecastTemp3">Temperature:</p>
                                 <p class="card-text" data-forecast=3 id="forecastHum3">Humidity:</p>
@@ -86,7 +84,7 @@
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                                <h5 class="card-title" data-forecast=4 id="forecastDate4">Day+1</h5>
+                                <h5 class="card-title" data-forecast=4 id="forecastDate4">Day+4</h5>
                                 <p class="card-text" data-forecast=1><img id="forecastIcon4" src="" alt=""></p>
                                 <p class="card-text" data-forecast=4 id="forecastTemp4">Temperature:</p>
                                 <p class="card-text" data-forecast=4 id="forecastHum4">Humidity:</p>
@@ -96,7 +94,7 @@
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
                             <div class="card-body">
-                                <h5 class="card-title" data-forecast=5 id="forecastDate5">Day+1</h5>
+                                <h5 class="card-title" data-forecast=5 id="forecastDate5">Day+5</h5>
                                 <p class="card-text" data-forecast=1><img id="forecastIcon5" src="" alt=""></p>
                                 <p class="card-text" data-forecast=5 id="forecastTemp5">Temperature:</p>
                                 <p class="card-text" data-forecast=5 id="forecastHum5">Humidity:</p>
