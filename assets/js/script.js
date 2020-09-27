@@ -113,10 +113,11 @@ $(function () {
     });
 
 
-    // $(".city").on("click", function (event) {
-    //     event.preventDefault();
-    //     city = $(this).child().child().attr("id");
-    //     fetchWeatherForCity(city);
-    // });
+    $(".btn").click( function (event) {
+        // event.preventDefault();
+        // city = $(this).attr("id");
+        console.log($(this).attr("id"));
+        // fetchWeatherForCity(city);
+    });
 });
 
